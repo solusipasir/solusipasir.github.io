@@ -907,21 +907,44 @@ body.dark {
 /* Buttons WhatsApp */
 .Btn {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 60px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 50px;
   text-decoration: none;
   cursor: pointer;
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  right: 10px;
+  bottom: 20px;
   z-index: 5;
-  overflow: hidden;
   background: var(--btn-bg);
   box-shadow: var(--btn-shadow);
   transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 30px;
+  transition: transform 0.3s ease;
+}
+
+.sign svg path {
+  fill: white;
+}
+
+.btnText {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
 }
 
 .Btn:hover {
@@ -933,15 +956,6 @@ body.dark {
 .Btn:active {
   transform: translateY(2px);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.sign svg {
-  width: 30px;
-  transition: transform 0.3s ease;
-}
-
-.sign svg path {
-  fill: white;
 }
 
 @keyframes float {
@@ -956,7 +970,8 @@ body.dark {
   }
 }
 
-.Btn:hover .sign svg {
+.Btn:hover .sign svg,
+.Btn:hover .btnText {
   animation: float 1.5s ease-in-out infinite;
 }
 /* End Buttons WhatsApp */
@@ -2116,17 +2131,6 @@ a.ns-3 {
   }
   /* End Carousel Img */
 
-  /* Buttons WhatsApp */
-  .Btn {
-    width: 50px;
-    height: 50px;
-  }
-
-  .sign svg {
-    width: 25px;
-  }
-  /* End Buttons WhatsApp */
-
   /* Blog Content */
   .nw-3 {
     gap: 1rem;
@@ -2141,6 +2145,22 @@ a.ns-3 {
     font-size: 15px;
   }
   /* End Blog Content */
+
+  /* Buttons WhatsApp */
+  .Btn {
+    gap: 6px;
+    padding: 0 15px;
+    height: 50px;
+  }
+
+  .sign svg {
+    width: 25px;
+  }
+
+  .btnText {
+    font-size: 14px;
+  }
+  /* End Buttons WhatsApp */
 }
 
 @media (max-width: 710px) {
