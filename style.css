@@ -1925,6 +1925,10 @@ a.ns-3 {
     border-radius: 0;
   }
 
+  .ch-1 {
+    margin: 0;
+  }
+
   .ch-2,
   .ch-3 img {
     border-radius: 0;
