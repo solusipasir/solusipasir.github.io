@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Halaman utama -->
+  <url>
+    <loc>https://solusipasir.com/index.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://solusipasir.com/about.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://solusipasir.com/produk.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://solusipasir.com/harga.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://solusipasir.com/blog.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Artikel blog -->
+  <url><loc>https://solusipasir.com/asset_blog/content-1.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_blog/content-2.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_blog/content-3.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_blog/content-4.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_blog/content-5.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_blog/content-6.html</loc></url>
+
+  <!-- Halaman produk -->
+  <url><loc>https://solusipasir.com/asset_produk/produk_1.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_2.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_3.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_4.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_5.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_6.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_7.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_8.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_9.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_10.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_11.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_12.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_13.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_14.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_15.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_16.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_17.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_18.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_19.html</loc></url>
+  <url><loc>https://solusipasir.com/asset_produk/produk_20.html</loc></url>
+
+</urlset>
