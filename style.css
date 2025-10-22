@@ -1745,6 +1745,31 @@ a.ns-3 {
 }
 /* End Carousel Harga Img  */
 
+/* 404 */
+.jd-cd-404 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5rem 0;
+  gap: 2rem;
+}
+
+.jd-cd-404 span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: var(--text-3);
+}
+
+.jd-cd-404 h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: var(--text-1);
+}
+/* End 404 */
+
 /* RESPONSIF */
 @media (max-width: 1220px) {
   /* Card Testimoni */
