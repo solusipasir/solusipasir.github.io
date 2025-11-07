@@ -980,6 +980,11 @@ body.dark {
 .footer {
   padding: 2rem;
   background-color: var(--color-1);
+  background-image: url("asset_img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .footer-top {
