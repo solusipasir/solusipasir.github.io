@@ -13,6 +13,8 @@
   --text-3: #3c434b;
   --text-4: #0073e6;
   --text-5: #003870;
+  --text-6: #00e060;
+  --text-7: #0d6efd;
   --box-1: 0 8px 14px hsl(219deg 48% 6% / 40%);
   --btn-bg: linear-gradient(145deg, #00e060, #00b94a);
   --btn-shadow:
@@ -37,6 +39,8 @@ body.dark {
   --text-3: #d1d6db;
   --text-4: #7abcff;
   --text-5: #c8e4ff;
+  --text-6: #009c43;
+  --text-7: #0254cd;
   --box-1: 0 8px 14px hsla(222, 11%, 82%, 0.4);
   --btn-bg: linear-gradient(145deg, #009c43, #007b33);
   --btn-shadow:
@@ -686,8 +690,8 @@ body.dark {
 .pk-8 {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 20px;
+  margin-bottom: 0.8rem;
   text-transform: uppercase;
   color: var(--text-2);
 }
@@ -695,48 +699,41 @@ body.dark {
 .pk-9 {
   display: flex;
   text-align: left;
-  font-size: 1rem;
+  font-size: 15px;
   color: var(--text-3);
 }
 
+.pk-11 {
+  display: flex;
+  gap: 10px;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
 .pk-10 {
-  margin-top: 1rem;
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 0.5rem;
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  padding: 12px 20px;
+  font-size: 14px;
   cursor: pointer;
   font-weight: bold;
-  background-color: transparent;
   position: relative;
-  transition: all 1s;
   overflow: hidden;
   display: inline-block;
-  color: var(--text-1);
-  border: 1px solid var(--text-1);
+  z-index: 1;
 }
 
-.pk-10:hover {
-  color: white;
-  z-index: 2;
+.btn-detail {
+  color: #ffff;
+  border: 1px solid var(--text-7);
+  background-color: var(--text-7);
 }
 
-.pk-10::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 0%;
-  top: 0;
-  z-index: -1;
-  left: -40px;
-  transform: skewX(45deg);
-  background-color: var(--text-1);
-  transition: all 1s;
-}
-
-.pk-10:hover::before {
-  width: 160%;
+.btn-wa {
+  color: #ffff;
+  border: 1px solid var(--text-6);
+  background-color: var(--text-6);
 }
 /* End Produk */
 
@@ -2423,6 +2420,21 @@ a.ns-3 {
     width: 250px;
   }
   /* End Logo */
+
+  /* CARD PRODUK*/
+  .pk-8 {
+    font-size: 18px;
+  }
+
+  .pk-9 {
+    font-size: 14px;
+  }
+
+  .pk-10 {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  /* END CARD PRODUK */
 }
 
 @media (max-width: 620px) {
@@ -2540,22 +2552,6 @@ a.ns-3 {
   /* End Blog */
 }
 
-@media (max-width: 540px) {
-  /* Produk */
-  .pk-8 {
-    font-size: 1rem;
-  }
-
-  .pk-9 {
-    font-size: 0.9rem;
-  }
-
-  .pk-10 {
-    font-size: 0.7rem;
-  }
-  /* End Produk */
-}
-
 @media (max-width: 530px) {
   /* Carousel */
   .cl-4 h2 {
@@ -2577,7 +2573,7 @@ a.ns-3 {
 
   /* Produk Pasir */
   .pk-5::before {
-    left: 12%;
+    left: 10%;
   }
 
   .pk-5 li .pk-7::before {
@@ -2589,15 +2585,26 @@ a.ns-3 {
   }
 
   .pk-6 {
-    width: 100px;
-    height: 100px;
-    left: 12%;
+    width: 90px;
+    height: 90px;
+    left: 10%;
   }
 
   .pk-7 {
-    width: 65%;
+    width: 75%;
   }
   /* End Produk Pasir */
+
+  /* CARD PRODUK*/
+  .pk-8 {
+    font-size: 16px;
+  }
+
+  .pk-10 {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+  /* END CARD PRODUK */
 
   /* Card Testimoni */
   .ti-1 {
@@ -2727,6 +2734,45 @@ a.ns-3 {
     font-size: 14px;
   }
   /* End Tabel Wa */
+
+  /* Produk Pasir */
+  .pk-5 li {
+    margin-bottom: 3rem;
+  }
+
+  .pk-5::before {
+    left: 8%;
+  }
+
+  .pk-5 li .pk-7::before {
+    top: 40px;
+  }
+
+  .pk-5 li .pk-7::after {
+    top: 41px;
+  }
+
+  .pk-6 {
+    width: 80px;
+    height: 80px;
+    left: 8%;
+  }
+
+  .pk-7 {
+    width: 75%;
+    padding: 1.2rem;
+  }
+  /* End Produk Pasir */
+
+  /* CARD PRODUK*/
+  .pk-8 {
+    font-size: 14px;
+  }
+
+  .pk-9 {
+    font-size: 13px;
+  }
+  /* END CARD PRODUK */
 }
 
 @media (max-width: 420px) {
@@ -2958,29 +3004,6 @@ a.ns-3 {
   }
   /* End Card About */
 
-  /* Produk */
-  .pk-5 li .pk-7::before {
-    top: 45px;
-  }
-
-  .pk-5 li .pk-7::after {
-    top: 46px;
-  }
-
-  .pk-6 {
-    width: 90px;
-    height: 90px;
-  }
-
-  .pk-8 {
-    font-size: 0.9rem;
-  }
-
-  .pk-9 {
-    font-size: 0.8rem;
-  }
-  /* End Produk */
-
   /* Sosial Media */
   .card1,
   .card2,
@@ -2997,6 +3020,13 @@ a.ns-3 {
     height: 30px;
   }
   /* End Footer */
+
+  /* Produk Pasir */
+  .pk-7 {
+    width: 72%;
+    padding: 1.2rem;
+  }
+  /* End Produk Pasir */
 }
 
 @media (max-width: 340px) {
