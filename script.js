@@ -37,9 +37,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // NAVBAR ACTIVE LINK
-  const currentPage = window.location.pathname.split("/").pop();
+  const currentPath = window.location.pathname;
+
   document.querySelectorAll(".nav-7").forEach((link) => {
-    if (link.getAttribute("href") === currentPage) {
+    const href = link.getAttribute("href");
+
+    link.classList.remove("nav-8");
+
+    if (
+      (currentPath === "/" || currentPath.endsWith("/index.html")) &&
+      href === "/index.html"
+    ) {
+      link.classList.add("nav-8");
+    }
+
+    if (currentPath.endsWith("/about.html") && href === "/about.html") {
+      link.classList.add("nav-8");
+    }
+
+    if (currentPath.endsWith("/produk.html") && href === "/produk.html") {
+      link.classList.add("nav-8");
+    }
+
+    if (currentPath.endsWith("/harga.html") && href === "/harga.html") {
+      link.classList.add("nav-8");
+    }
+
+    if (currentPath.endsWith("/blog.html") && href === "/blog.html") {
       link.classList.add("nav-8");
     }
   });
@@ -91,4 +115,92 @@ document.addEventListener("DOMContentLoaded", function () {
       showSlide(index);
     }, SLIDE_DURATION);
   }
+
+  // ACCORDION
+  document.querySelectorAll(".ac-5").forEach((header) => {
+    header.addEventListener("click", () => {
+      const item = header.closest(".ac-4");
+      const icon = header.querySelector(".ac-7");
+
+      const isActive = item.classList.toggle("active");
+
+      if (icon) {
+        icon.classList.toggle("fa-chevron-up", isActive);
+        icon.classList.toggle("fa-chevron-down", !isActive);
+      }
+    });
+  });
+
+  // TRUCK SWITCHER
+  const image = document.getElementById("carImage");
+  const title = document.getElementById("truckName");
+  const buttons = document.querySelectorAll(".truck-btn");
+
+  if (image && title && buttons.length > 0) {
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Jika tombol yang sama diklik, hentikan
+        if (button.classList.contains("active")) return;
+
+        const newImage = button.dataset.image?.trim();
+        const newName = button.dataset.name?.trim();
+
+        if (!newImage) return;
+
+        // Nonaktifkan semua tombol
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        // Aktifkan tombol sekarang
+        button.classList.add("active");
+
+        // Efek fade
+        image.classList.add("fade");
+
+        // Preload gambar
+        const preload = new Image();
+
+        preload.onload = () => {
+          image.src = newImage;
+
+          if (newName) {
+            title.textContent = newName;
+          }
+
+          image.onload = () => {
+            image.classList.remove("fade");
+          };
+        };
+
+        preload.onerror = () => {
+          console.error("Gagal memuat gambar:", newImage);
+
+          image.classList.remove("fade");
+        };
+
+        preload.src = newImage;
+      });
+    });
+  }
+
+  // POPUP PROMO
+  const popup = document.getElementById("popup");
+  const closePopup = document.getElementById("closePopup");
+
+  // Pastikan elemen tersedia
+  if (!popup || !closePopup) {
+    return;
+  }
+
+  // Tampilkan popup setelah 5 detik
+  if (!localStorage.getItem("popupShown")) {
+    setTimeout(function () {
+      popup.classList.remove("hide");
+      localStorage.setItem("popupShown", "true");
+    }, 5000);
+  }
+
+  // TUTUP POPUP HANYA DENGAN TOMBOL CLOSE
+  closePopup.addEventListener("click", function () {
+    popup.classList.add("hide");
+  });
 });
